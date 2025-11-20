@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const Pusher = require('pusher');
+const path = require('path');
 const app = express();
 const PORT = 3000;
 
-app.use(express.static(__dirname));
+// Serve static files from "public" folder
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 // Pusher setup
@@ -25,6 +27,11 @@ app.post('/send', (req, res) => {
   });
 
   res.sendStatus(200);
+});
+
+// Ensure GET / serves index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(PORT, () => {
