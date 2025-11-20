@@ -9,10 +9,10 @@ app.use(bodyParser.json());
 
 // Pusher setup
 const pusher = new Pusher({
-  appId: 'YOUR_APP_ID',
-  key: 'YOUR_PUSHER_KEY',
-  secret: 'YOUR_PUSHER_SECRET',
-  cluster: 'YOUR_PUSHER_CLUSTER',
+  appId: '2080160',
+  key: 'b7d05dcc13df522efbbc',
+  secret: '4064ce2fc0ac5596d506',
+  cluster: 'us2',
   useTLS: true
 });
 
@@ -30,4 +30,3 @@ app.post('/send', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Veilian-Chat server running at http://localhost:${PORT}`);
 });
-
