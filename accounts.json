@@ -1,0 +1,8 @@
+[
+  {
+    "username": "@moderator",
+    "password": "$2b$10$hashedpasswordhere",
+    "role": "admin",
+    "ip": ""
+  }
+]
