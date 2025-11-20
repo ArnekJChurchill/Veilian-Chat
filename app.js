@@ -1,6 +1,6 @@
 // Pusher Setup
-const pusher = new Pusher('YOUR_PUSHER_KEY', {
-  cluster: 'YOUR_PUSHER_CLUSTER'
+const pusher = new Pusher('b7d05dcc13df522efbbc', {
+  cluster: 'us2'
 });
 
 const channel = pusher.subscribe('veilian-chat');
